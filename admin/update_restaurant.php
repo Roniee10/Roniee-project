@@ -371,7 +371,7 @@ if(isset($_POST['submit']))
                                                                 <label class="control-label">Select Category</label>
                                                                 <select name="c_name" class="form-control custom-select" data-placeholder="Choose a Category" tabindex="1">
                                                                     <option>--Select Category--</option>
-                                                                    <?php $ssql ="select * from res_category";
+                                                                    <?php $ssql ="select * from bakery_image";
 													$res=mysqli_query($db, $ssql); 
 													while($rows=mysqli_fetch_array($res))  
 													{

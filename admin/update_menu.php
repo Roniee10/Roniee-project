@@ -190,11 +190,10 @@
 
 
 <div class="col-lg-12">
-                                    <div class="card card-outline-primary">
-                                        <div class="card-header">
+                                    <div class="card card-outline-primary" style="margin-left:200px">                                        <div class="card-header">
                                             <h4 class="m-b-0 text-white">Bakery Menu </h4>
                                         </div>
-                                        <div class="card-body">
+                                        <div class="card-body" >
                                             <form action='' method='post' enctype="multipart/form-data">
                                                 <div class="form-body">
                                                     <?php
@@ -222,7 +221,7 @@
                                                                 <label class="control-label">Quantity </label>
                                                                 <input type="text" name="stock" value="<?php echo $roww[
                                                                     'stock'
-                                                                ]; ?>" class="form-control" placeholder="$">
+                                                                ]; ?>" class="form-control" placeholder="Rs ">
                                                             </div>
                                                         </div>
 
@@ -243,7 +242,7 @@
                                                                 <label class="control-label">Price </label>
                                                                 <input type="text" name="price" value="<?php echo $roww[
                                                                     'price'
-                                                                ]; ?>" class="form-control" placeholder="$">
+                                                                ]; ?>" class="form-control" placeholder="Rs ">
                                                             </div>
                                                         </div>
 

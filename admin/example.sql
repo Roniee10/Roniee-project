@@ -128,20 +128,20 @@ INSERT INTO restaurant (rs_id, c_id, title, email, phone, url, o_hr, c_hr, o_day
 -- --------------------------------------------------------
 
 --
--- Table structure for table res_category
+-- Table structure for table bakery_image
 --
 
-CREATE TABLE res_category (
+CREATE TABLE bakery_image (
   c_id int NOT NULL,
   c_name varchar(222) NOT NULL,
   date timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table res_category
+-- Dumping data for table bakery_image
 --
 
-INSERT INTO res_category (c_id, c_name, date) VALUES
+INSERT INTO bakery_image (c_id, c_name, date) VALUES
 (1, 'Continental', '2022-05-27 08:07:35'),
 (2, 'Italian', '2021-04-07 08:45:23'),
 (3, 'Chinese', '2021-04-07 08:45:25'),
@@ -211,9 +211,9 @@ ALTER TABLE restaurant
   ADD PRIMARY KEY (rs_id);
 
 --
--- Indexes for table res_category
+-- Indexes for table bakery_image
 --
-ALTER TABLE res_category
+ALTER TABLE bakery_image
   ADD PRIMARY KEY (c_id);
 
 --
@@ -257,9 +257,9 @@ ALTER TABLE restaurant
   MODIFY rs_id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table res_category
+-- AUTO_INCREMENT for table bakery_image
 --
-ALTER TABLE res_category
+ALTER TABLE bakery_image
   MODIFY c_id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --

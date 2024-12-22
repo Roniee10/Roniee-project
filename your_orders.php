@@ -240,7 +240,7 @@ td, th {
                                         <tr>
                                             <td data-column="Item"> <?php echo $row['title']; ?></td>
                                             <td data-column="Quantity"> <?php echo $row['quantity']; ?></td>
-                                            <td data-column="price">$<?php echo $row['price']; ?></td>
+                                            <td data-column="price">Rs <?php echo $row['price']; ?></td>
                                             <td data-column="status">
                                                 <?php 
 																			$status=$row['status'];
@@ -278,7 +278,14 @@ td, th {
 
                                             </td>
                                             <td data-column="Date"> <?php echo $row['date']; ?></td>
-                                            <td data-column="Action"> <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10"><i class="fa fa-trash-o" style="font-size:16px"></i></a>
+                                            <td data-column="Action">
+    <a href="delete_orders.php?order_del=<?php echo $row['o_id'];?>" onclick="return confirm('Are you sure you want to cancel your order?');" class="btn btn-danger btn-flat btn-addon btn-xs m-b-10" style="position: relative; display: inline-block;">
+        <span style="display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: linear-gradient(135deg, #ff4e50, #f9d423); box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; line-height: 24px;">
+            <i class="fa fa-ban" style="color: white; font-size: 14px;"></i>
+        </span>
+    </a>
+</td>
+
                                             </td>
 
                                         </tr>

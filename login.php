@@ -40,7 +40,7 @@
     <link href="css/style.css" rel="stylesheet">
 
 </head>
-<!--  Author Name: MH RONY.
+<!--  Author Name: MH RONI.
                         GigHub Link: https://github.com/dev-mhrony
                         Facebook Link:https://www.facebook.com/dev.mhrony
                         Youtube Link: https://www.youtube.com/channel/UChYhUxkwDNialcxj-OFRcDw
@@ -106,6 +106,7 @@ if(isset($_POST['submit']))
 								{
                                     	$_SESSION["user_id"] = $row['u_id']; 
 										 header("refresh:1;url=index.php"); 
+                                      	$message = "Login Sucessfully!"; 
 	                            } 
 							else
 							    {

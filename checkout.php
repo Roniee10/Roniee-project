@@ -104,7 +104,7 @@ else{
                     <ul class="row links">
 
                         <li class="col-xs-12 col-sm-4 link-item"><span>1</span><a href="restaurants.php">Bakery 🎂</a></li>
-                        <li class="col-xs-12 col-sm-4 link-item "><span>2</span><a href="#">Pick Your favorite intlcal_get_error_message</a></li>
+                        <li class="col-xs-12 col-sm-4 link-item "><span>2</span><a href="#">Pick Your favorite</a></li>
                         <li class="col-xs-12 col-sm-4 link-item active"><span>3</span><a href="checkout.php">Order and Pay</a></li>
                     </ul>
                 </div>
@@ -142,7 +142,7 @@ else{
 
                                                         <tr>
                                                             <td>Cart Subtotal</td>
-                                                            <td> <?php echo "$".$item_total; ?></td>
+                                                            <td> <?php echo "Rs ".$item_total; ?></td>
                                                         </tr>
                                                         <tr>
                                                             <td>Delivery Charges</td>
@@ -150,7 +150,7 @@ else{
                                                         </tr>
                                                         <tr>
                                                             <td class="text-color"><strong>Total</strong></td>
-                                                            <td class="text-color"><strong> <?php echo "$".$item_total; ?></strong></td>
+                                                            <td class="text-color"><strong> <?php echo "Rs ".$item_total; ?></strong></td>
                                                         </tr>
                                                     </tbody>
 
@@ -170,7 +170,13 @@ else{
                                                 <li>
                                                     <label class="custom-control custom-radio  m-b-10">
                                                         <input name="mod" type="radio" value="paypal"  class="custom-control-input  "> <span class="custom-control-indicator"></span> <span class="custom-control-description"><a href="https://www.paypal.com/np/home">
-    <img src="images/Paypal.png" alt="Paypal" width="80 ">
+    <img src="images/Paypal.png" alt="Paypal" width="70 ">
+</a></span> </label>
+                                                </li>
+                                                <li>
+                                                    <label class="custom-control custom-radio  m-b-10">
+                                                        <input name="mod" type="radio" value="esewa" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description"><a href="https://esewa.com.np/#/home">
+    <img src="images/esewa.png" alt="eSewa" width="70">
 </a></span> </label>
                                                 </li>
                                             </ul>

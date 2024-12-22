@@ -171,7 +171,7 @@ session_start();
 																	while($rows=mysqli_fetch_array($query))
 																		{
 																					
-																				$mql="SELECT * FROM res_category where c_id='".$rows['c_id']."'";
+																				$mql="SELECT * FROM bakery_image where c_id='".$rows['c_id']."'";
 																					$res=mysqli_query($db,$mql);
 																					$row=mysqli_fetch_array($res);
 																				

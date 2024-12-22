@@ -203,7 +203,7 @@
                                 
 
 
-                                <div class="col-lg-12">
+                                <div class="col-lg-12" style="margin-left:200px">
                                     <div class="card card-outline-primary">
                                         <div class="card-header">
                                             <h4 class="m-b-0 text-white">Add Menu</h4>
@@ -241,7 +241,7 @@
                                                         <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label class="control-label">Price </label>
-                                                                <input type="text" name="price" class="form-control" placeholder="$">
+                                                                <input type="text" name="price" class="form-control" placeholder="Rs ">
                                                             </div>
                                                         </div>
 

@@ -342,7 +342,7 @@
                                                                     <option>--Select Category--</option>
                                                                     <?php
                                                                     $ssql =
-                                                                        'select * from res_category';
+                                                                        'select * from bakery_image';
                                                                     $res = mysqli_query(
                                                                         $db,
                                                                         $ssql

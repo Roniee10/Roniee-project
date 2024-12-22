@@ -36,6 +36,17 @@ if(isset($_POST['submit']))
                 <head>
                     <meta charset="UTF-8">
                     <title>Admin Login</title>
+                    <script>
+        function checkAdmin() {
+            // Replace this condition with your actual admin check logic
+            var isAdmin = false; // Change to true if user is admin
+
+            if (!isAdmin) {
+                alert("!!ALERT!! You are not authorized to access this website. Please do not enter if you are not an admin.");
+                // window.location.href = "http://www.example.com"; // Redirect to a different page
+            }
+        }
+    </script>
 
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -49,7 +60,9 @@ if(isset($_POST['submit']))
                 </head>
 
                 <body>
-
+                <body onload="checkAdmin()">
+    <b><h1>Welcome to the Admin Page</h1></b>
+    <!-- Your admin content goes here -->
                     
 
                     <div class="container">
@@ -65,7 +78,10 @@ if(isset($_POST['submit']))
                             <input type="text" placeholder="Username" name="username" />
                             <input type="password" placeholder="Password" name="password" />
                             <input type="submit" name="submit" value="Login" />
+                            
 
+
+                            
                         </form>
                         
 

@@ -18,6 +18,8 @@ if (empty($_SESSION['adm_id'])) {
     <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="css/helper.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         .navbar {
             background-color: #343a40;
@@ -91,7 +93,7 @@ if (empty($_SESSION['adm_id'])) {
                         <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                         <li class="nav-label">Details</li>
                         <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Customer Details</span></a></li>
-                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
+                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-utensils" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="all_menu.php">All Menus</a></li>
                                 <li><a href="add_menu.php">Add Menu</a></li>
@@ -114,16 +116,17 @@ if (empty($_SESSION['adm_id'])) {
                                 <div class="card p-30" style="border:1px solid grey; background-color:#ccccec">
                                     <div class="media">
                                         <div class="media-left meida media-middle">
-                                            <span><i class="fa fa-cutlery f-s-40" aria-hidden="true"></i></span>
-                                        </div>
-                                        <div class="media-body media-text-right">
+                                            <!-- <span><i class="fa fa-utensils f-s-40" aria-hidden="true"></i></span> -->
                                             <h2><?php
                                             $sql = 'select * from dishes';
                                             $result = mysqli_query($db, $sql);
                                             $rws = mysqli_num_rows($result);
                                             echo $rws;
                                             ?></h2>
-                                            <p class="m-b-0">Product</p>
+                                        </div>
+                                        <div class="media-body media-text-right">
+                                       
+                                            <h3 class="m-b-0">Product</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -132,16 +135,17 @@ if (empty($_SESSION['adm_id'])) {
                                 <div class="card p-30" style="border:1px solid grey; background-color:#ccccec">
                                     <div class="media">
                                         <div class="media-left meida media-middle">
-                                            <span><i class="fa fa-users f-s-40"></i></span>
-                                        </div>
-                                        <div class="media-body media-text-right">
-                                            <h2><?php
+                                        <!-- <span><i class="fa fa-users-cog f-s-40"></i></span> -->
+                                        <h2><?php
                                             $sql = 'select * from users';
                                             $result = mysqli_query($db, $sql);
                                             $rws = mysqli_num_rows($result);
                                             echo $rws;
                                             ?></h2>
-                                            <p class="m-b-0">Customers</p>
+                                        </div>
+                                        <div class="media-body media-text-right">
+                                            
+                                            <h3 class="m-b-0">Customers</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -150,16 +154,20 @@ if (empty($_SESSION['adm_id'])) {
                                 <div class="card p-30" style="border:1px solid grey; background-color:#ccccec">
                                     <div class="media">
                                         <div class="media-left meida media-middle">
-                                            <span><i class="fa fa-spinner f-s-40" aria-hidden="true"></i></span>
-                                        </div>
-                                        <div class="media-body media-text-right">
-                                            <h2><?php
+                                        <!-- <span><i class="fa fa-refresh f-s-40" aria-hidden="true"></i></span> -->
+
+
+                                        <h2><?php
                                             $sql = "select * from users_orders WHERE status = 'in process' ";
                                             $result = mysqli_query($db, $sql);
                                             $rws = mysqli_num_rows($result);
                                             echo $rws;
                                             ?></h2>
-                                            <p class="m-b-0">Orders! On the way.</p>
+
+                                        </div>
+                                        <div class="media-body media-text-right">
+                                       
+                                            <h3 class="m-b-0">Orders! On the way.</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -168,16 +176,17 @@ if (empty($_SESSION['adm_id'])) {
                                 <div class="card p-30" style="border:1px solid grey; background-color:#ccccec">
                                     <div class="media">
                                         <div class="media-left meida media-middle">
-                                            <span><i class="fa fa-check f-s-40" aria-hidden="true"></i></span>
-                                        </div>
-                                        <div class="media-body media-text-right">
-                                            <h2><?php
+                                        <!-- <span><i class="fa fa-check f-s-40 text-success" aria-hidden="true"></i></span> -->
+                                        <h2><?php
                                             $sql = "select * from users_orders WHERE status = 'closed' ";
                                             $result = mysqli_query($db, $sql);
                                             $rws = mysqli_num_rows($result);
                                             echo $rws;
                                             ?></h2>
-                                            <p class="m-b-0">Successfully Delivered Orders</p>
+                                        </div>
+                                        <div class="media-body media-text-right">
+                                            
+                                            <h3 class="m-b-0">Successfully Delivered Orders</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -186,16 +195,17 @@ if (empty($_SESSION['adm_id'])) {
                                 <div class="card p-30" style="border:1px solid grey; background-color:#ccccec">
                                     <div class="media">
                                         <div class="media-left meida media-middle">
-                                            <span><i class="fa fa-times f-s-40" aria-hidden="true"></i></span>
-                                        </div>
-                                        <div class="media-body media-text-right">
+                                            <!-- <span><i class="fas fa-times-circle f-s-40" aria-hidden="true"></i></span> -->
                                             <h2><?php
                                             $sql = "select * from users_orders WHERE status = 'rejected' ";
                                             $result = mysqli_query($db, $sql);
                                             $rws = mysqli_num_rows($result);
                                             echo $rws;
                                             ?></h2>
-                                            <p class="m-b-0">Cancelled Orders</p>
+                                        </div>
+                                        <div class="media-body media-text-right">
+                                         
+                                            <h3 class="m-b-0">Cancelled Orders</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -204,16 +214,17 @@ if (empty($_SESSION['adm_id'])) {
                                 <div class="card p-30" style="border:1px solid grey; background-color:#ccccec">
                                     <div class="media">
                                         <div class="media-left meida media-middle">
-                                            <span><i class="fa fa-usd f-s-40" aria-hidden="true"></i></span>
-                                        </div>
-                                        <div class="media-body media-text-right">
+                                            <!-- <span><i class="fa fa-usd f-s-40" aria-hidden="true"></i></span> -->
                                             <h2><?php
                                             $result = mysqli_query($db, 'SELECT SUM(price) AS value_sum FROM users_orders WHERE status = "closed"');
                                             $row = mysqli_fetch_assoc($result);
                                             $sum = $row['value_sum'];
                                             echo $sum;
                                             ?></h2>
-                                            <p class="m-b-0">Total Earnings</p>
+                                        </div>
+                                        <div class="media-body media-text-right">
+                                    
+                                            <h3 class="m-b-0">Total Earnings</h3>
                                         </div>
                                     </div>
                                 </div>
@@ -236,3 +247,4 @@ if (empty($_SESSION['adm_id'])) {
 }
 ?>
 
+"

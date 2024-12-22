@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
     } else {
         $check_cat = mysqli_query(
             $db,
-            "SELECT c_name FROM res_category where c_name = '" .
+            "SELECT c_name FROM bakery_image where c_name = '" .
                 $_POST['c_name'] .
                 "' "
         );
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 															</div>';
         } else {
             $mql =
-                "INSERT INTO res_category(c_name) VALUES('" .
+                "INSERT INTO bakery_image(c_name) VALUES('" .
                 $_POST['c_name'] .
                 "')";
             mysqli_query($db, $mql);
@@ -202,7 +202,7 @@ if (isset($_POST['submit'])) {
 
                                         <?php
                                         $sql =
-                                            'SELECT * FROM res_category order by c_id desc';
+                                            'SELECT * FROM bakery_image order by c_id desc';
                                         $query = mysqli_query($db, $sql);
 
                                         if (!mysqli_num_rows($query) > 0) {

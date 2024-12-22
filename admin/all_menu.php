@@ -137,7 +137,7 @@
                                                 </div>
 
 
-                                                <div class="table-responsive m-t-40">
+                                                <div class="table-responsive m-t-40" >
                                                     <table id="example23" class="display nowrap table table-hover table-striped table-bordered" cellspacing="0" width="100%">
                                                         <thead class="thead-dark">
                                                             <tr>
@@ -189,9 +189,9 @@
                                                                     );
 
                                                                     echo '<tr><td>' .
-                                                                        // $fetch[
-                                                                        //     'title'
-                                                                        // ] .
+                                                                        $fetch[
+                                                                            'title'
+                                                                        ] .
                                                                         // '</td>
 																					
 																		// 						<td>' .
@@ -209,19 +209,19 @@
                                                                             'stock'
                                                                         ] .
                                                                         '</td>
-																								<td>$' .
+																								<td>Rs ' .
                                                                         $rows[
                                                                             'price'
                                                                         ] .
                                                                         '</td>
 																								
 																								
-																								<td><div class="col-md-3 col-lg-8 m-b-10">
+																								<td><div class="col-md-3 col-lg-8 m-b-10" style="width:100px;height:100px">
 																								<center><img src="Res_img/dishes/' .
                                                                         $rows[
                                                                             'img'
                                                                         ] .
-                                                                        '" class="img-responsive  radius" style="max-height:500px;max-width:450px;" /></center>
+                                                                        '" class="img-responsive  radius" style="max-height:500px;max-width:100px;" /></center>
 																								</div></td>
 																								
 																							

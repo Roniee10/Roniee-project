@@ -138,7 +138,7 @@ session_start();
                                                 <div class="content">
                                                     <h5><a href="dishes.php?res_id='.$r['rs_id'].'">'.$r['title'].'</a></h5>
                                                     <div class="product-name">'.$r['slogan'].'</div>
-                                                    <div class="price-btn-block"> <span class="price">$ '.$r['price'].'</span> <a href="dishes.php?res_id='.$r['rs_id'].'" class="btn btn-primary" style="border:4px solid">Buy Now</a> </div>
+                                                    <div class="price-btn-block"> <span class="price">Rs '.$r['price'].'</span> <a href="dishes.php?res_id='.$r['rs_id'].'" class="btn btn-primary" style="border:4px solid">Buy Now</a> </div>
                                                 </div>
                                                 
                                             </div>
@@ -223,7 +223,7 @@ session_start();
                             <ul>
                                 <li><a href="#" class="selected" data-filter="*">all</a> </li>
                                 <?php 
-									$res= mysqli_query($db,"select * from res_category");
+									$res= mysqli_query($db,"select * from bakery_image");
 									      while($row=mysqli_fetch_array($res))
 										  {
 											echo '<li><a href="#" data-filter=".'.$row['c_name'].'"> '.$row['c_name'].'</a> </li>';
@@ -247,7 +247,7 @@ session_start();
 									      while($rows=mysqli_fetch_array($ress))
 										  {
 													
-													$query= mysqli_query($db,"select * from res_category where c_id='".$rows['c_id']."' ");
+													$query= mysqli_query($db,"select * from bakery_image where c_id='".$rows['c_id']."' ");
 													 $rowss=mysqli_fetch_array($query);
 						
 													 echo ' <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant all '.$rowss['c_name'].'">
